@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
+const authRouter = require("./routes/authRoutes");
 
 const kosRoutes = require("./routes/kosRoutes");
 
@@ -13,13 +14,18 @@ app.use(express.json());
 
 // Routes
 app.use("/api/kos", kosRoutes);
+app.use("/api/auth", authRouter);
 
+const clientOptions = {
+  serverApi: {
+    version: "1",
+    strict: true,
+    deprecationErrors: true,
+  },
+};
 // Connect MongoDB
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI, clientOptions)
   .then(() => {
     console.log("MongoDB Connected");
 
