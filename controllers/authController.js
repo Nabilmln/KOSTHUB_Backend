@@ -1,6 +1,7 @@
 const Auth = require("../models/Auth");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const { verifyToken } = require("../middleware/auth");
 
 exports.register = async (req, res) => {
   try {
@@ -16,7 +17,7 @@ exports.register = async (req, res) => {
       return res.status(400).json({ message: "Username or email already exists" });
     }
 
-        const newUser = new Auth({
+    const newUser = new Auth({
       username,
       email,
       password: hashedPassword,
@@ -54,4 +55,28 @@ exports.login = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Error logging in", error });
   }
+}
+
+exports.changePassword = async (req, res) => {
+  verifyToken(req, res, async () => {
+    try {
+      const { oldPassword, newPassword } = req.body;
+      const user = await Auth.findById(req.user.id);
+
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      const isMatch = await bcrypt.compare(oldPassword, user.password);
+      if (!isMatch) {
+        return res.status(401).json({ message: "Invalid credentials" });
+      }
+
+      user.password = await bcrypt.hash(newPassword, 10);
+      await user.save();
+      res.json({ message: "Password changed successfully" });
+    } catch (error) {
+      res.status(500).json({ message: "Error changing password", error });
+    }
+  });
 }
