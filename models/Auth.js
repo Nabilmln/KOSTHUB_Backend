@@ -29,6 +29,9 @@ const Auth = new mongoose.Schema({
   alamat: {
     type: String,
   },
+  gender : {
+    type: Boolean,
+  },
   token: {
     type: String,
   },

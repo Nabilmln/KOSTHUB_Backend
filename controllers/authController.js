@@ -4,16 +4,19 @@ const jwt = require("jsonwebtoken");
 
 exports.register = async (req, res) => {
   try {
-    const { username, email, password, fullname, nomor, tanggal_lahir, alamat } = req.body;
+    const { username, email, password, fullname, nomor, tanggal_lahir, alamat, gender } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
+    let realGernder = gender === "Laki" ? true : false;
 
-    if (!username || !email || !password || !fullname || !nomor) {
+    if (!username || !email || !password || !fullname || !nomor || !tanggal_lahir || !alamat || !realGernder) {
       return res.status(400).json({ message: "All fields are required" });
     }
     const existingUser = await Auth.findOne({ $or: [{ username }, { email }] });
     if (existingUser) {
       return res.status(400).json({ message: "Username or email already exists" });
     }
+
+    
 
     const newUser = new Auth({
       username,
@@ -23,6 +26,7 @@ exports.register = async (req, res) => {
       nomor,
       tanggal_lahir: tanggal_lahir || null,
       alamat: alamat || null,
+      gender: realGernder,
       token: null,
     });
 
