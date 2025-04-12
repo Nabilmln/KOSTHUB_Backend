@@ -8,7 +8,7 @@ exports.register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     let realGernder = gender === "Laki" ? true : false;
 
-    if (!username || !email || !password || !fullname || !nomor || !tanggal_lahir || !alamat || !realGernder) {
+    if (!username || !email || !password || !fullname || !nomor || !tanggal_lahir || !alamat ) {
       return res.status(400).json({ message: "All fields are required" });
     }
     const existingUser = await Auth.findOne({ $or: [{ username }, { email }] });
@@ -16,9 +16,7 @@ exports.register = async (req, res) => {
       return res.status(400).json({ message: "Username or email already exists" });
     }
 
-    
-
-    const newUser = new Auth({
+        const newUser = new Auth({
       username,
       email,
       password: hashedPassword,
