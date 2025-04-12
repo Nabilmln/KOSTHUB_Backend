@@ -11,6 +11,14 @@ const KosSchema = new mongoose.Schema({
     email: String,
     nomor: String,
   },
+  ulasan: [
+    {
+      nama: String,
+      bintang: Number,
+      komentar: String,
+    },
+  ],
+  deskripsi: String,
 });
 
 module.exports = mongoose.model("Kos", KosSchema);
