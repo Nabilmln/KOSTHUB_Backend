@@ -32,6 +32,10 @@ const Auth = new mongoose.Schema({
   gender : {
     type: Boolean,
   },
+  bio : {
+    type: String,
+    default: "",
+  },
   token: {
     type: String,
   },
