@@ -1,24 +1,30 @@
 const mongoose = require("mongoose");
 
 const KosSchema = new mongoose.Schema({
-  id_kos: Number,
-  nama_kos: String,
-  alamat: String,
-  fasilitas: [String],
-  harga_perbulan: Number,
-  harga_pertahun: Number,
+  id_kos: { type: Number, required: true, unique: true },
+  nama_kos: { type: String, required: true },
+  alamat: { type: String, required: true },
+  fasilitas: { type: [String], default: [] }, // Contoh: ["Wifi", "Kasur"]
+  harga_perbulan: { type: Number, required: true },
+  harga_pertahun: { type: Number, required: true },
   kontak: {
-    email: String,
-    nomor: String,
+    email: { type: String, required: true },
+    nomor: { type: String, required: true },
   },
   ulasan: [
     {
-      nama: String,
-      bintang: Number,
-      komentar: String,
+      nama: { type: String, required: true },
+      bintang: { type: Number, required: true }, // Rating dari 1 hingga 5
+      komentar: { type: String, required: true },
     },
   ],
-  deskripsi: String,
+  image: [
+    {
+      url: {type: String, required: true},
+      isThumbnail: {type: Boolean, default: false}
+    },
+  ],
+  deskripsi: { type: String, default: "" },
 });
 
 module.exports = mongoose.model("Kos", KosSchema);
