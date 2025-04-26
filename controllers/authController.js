@@ -2,6 +2,7 @@ const Auth = require("../models/Auth");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { verifyToken } = require("../middleware/auth");
+const Kos = require("../models/Kos");
 
 exports.register = async (req, res) => {
   try {
@@ -135,23 +136,37 @@ exports.updateProfile = async (req, res) => {
   }
 }; 
 
-// exports.getProfile = async (req, res) => {
-//   try {
-//     const user = await Auth.findById(req.user.id);
-//     if (!user) {
-//       return res.status(404).json({ message: "User not found" });
-//     }
+exports.saveKos = async (req, res) => {
+  const { id_kos } = req.params; // Ambil id_kos dari parameter URL
 
-//     const profileData = {
-//       username: user.username,
-//       email: user.email,
-//       fotoProfil: user.fotoProfil
-//         ? `http://localhost:3000/${user.fotoProfil}` // Tambahkan URL base
-//         : null,
-//     };
+  try {
+    // Cari kos berdasarkan id_kos
+    const kos = await Kos.findOne({ id_kos }); // Gunakan id_kos, bukan _id
+    if (!kos) {
+      return res.status(404).json({ message: "Kos not found" });
+    }
 
-//     res.status(200).json(profileData);
-//   } catch (error) {
-//     res.status(500).json({ message: "Error fetching profile", error });
-//   }
-// };
+    // Cari user berdasarkan ID (dari token)
+    const user = await Auth.findById(req.user.id);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Periksa apakah kos sudah disimpan sebelumnya
+    if (user.savedKos && user.savedKos.includes(kos._id)) {
+      return res.status(400).json({ message: "Kos already saved" });
+    }
+
+    // Tambahkan kos ke daftar savedKos
+    user.savedKos = user.savedKos || []; // Pastikan savedKos adalah array
+    user.savedKos.push(kos._id);
+    await user.save();
+
+    res
+      .status(200)
+      .json({ message: "Kos saved successfully", savedKos: user.savedKos });
+  } catch (error) {
+    console.error("Error saving kos:", error);
+    res.status(500).json({ message: "Error saving kos", error: error.message });
+  }
+};

@@ -44,6 +44,12 @@ const Auth = new mongoose.Schema({
   token: {
     type: String,
   },
+  savedKos: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Kos",
+    },
+  ],
 });
 
 module.exports = mongoose.model("Auth", Auth);
