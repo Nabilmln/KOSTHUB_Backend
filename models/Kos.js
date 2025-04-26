@@ -11,6 +11,14 @@ const KosSchema = new mongoose.Schema({
     email: { type: String, required: true },
     nomor: { type: String, required: true },
   },
+  avgBintang: { type: Number, default: 0 }, // Rata-rata rating dari 1 hingga 5
+  image: [
+    {
+      url: { type: String, required: true },
+      isThumbnail: { type: Boolean, default: false },
+    },
+  ],
+  deskripsi: { type: String, default: "" },
   ulasan: [
     {
       nama: { type: String, required: true },
@@ -18,13 +26,6 @@ const KosSchema = new mongoose.Schema({
       komentar: { type: String, required: true },
     },
   ],
-  image: [
-    {
-      url: {type: String, required: true},
-      isThumbnail: {type: Boolean, default: false}
-    },
-  ],
-  deskripsi: { type: String, default: "" },
 });
 
 module.exports = mongoose.model("Kos", KosSchema);

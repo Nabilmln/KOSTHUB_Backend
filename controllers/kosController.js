@@ -73,7 +73,7 @@ exports.filterKos = async (req, res) => {
         },
       },
       {
-        $match: filter, // Terapkan filter lainnya
+        $match: filter, // Terapkan filter lain nya
       },
     ];
 

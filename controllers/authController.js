@@ -82,16 +82,44 @@ exports.changePassword = async (req, res) => {
 }
 
 exports.updateProfile = async (req, res) => {
-  const { username, email, ...updates } = req.body; // Ambil username, email, dan atribut lainnya
+  const { username, email, fotoProfil, ...updates } = req.body; // Ambil username, email, foto profil, dan atribut lainnya
 
   try {
-    // Cari user berdasarkan username dan email
-    const user = await Auth.findOne({ username, email });
+    // Cari user berdasarkan ID (dari token)
+    const user = await Auth.findById(req.user.id);
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Perbarui hanya atribut yang dikirimkan
+    // Periksa apakah username baru sudah digunakan oleh user lain
+    if (username && username !== user.username) {
+      const existingUsername = await Auth.findOne({ username });
+      if (existingUsername) {
+        return res.status(400).json({ message: "Username already exists" });
+      }
+      user.username = username; // Perbarui username
+    }
+
+    // Periksa apakah email baru sudah digunakan oleh user lain
+    if (email && email !== user.email) {
+      const existingEmail = await Auth.findOne({ email });
+      if (existingEmail) {
+        return res.status(400).json({ message: "Email already exists" });
+      }
+      user.email = email; // Perbarui email
+    }
+
+    // Perbarui foto profil jika ada
+    if (fotoProfil) {
+      user.fotoProfil = fotoProfil; // Simpan URL atau path foto profil
+    }
+
+    // Perbarui foto profil jika ada file yang diunggah
+    if (req.file) {
+      user.fotoProfil = req.file.path; // Simpan path file yang diunggah
+    }
+
+    // Perbarui atribut lainnya
     Object.keys(updates).forEach((key) => {
       if (updates[key] !== undefined) {
         user[key] = updates[key];
@@ -102,6 +130,28 @@ exports.updateProfile = async (req, res) => {
 
     res.status(200).json({ message: "Profile updated successfully", user });
   } catch (error) {
-    res.status(500).json({ message: "Error updating profile", error });
+  console.error("Error updating profile:", error); // Cetak error ke konsol
+  res.status(500).json({ message: "Error updating profile", error: error.message });
   }
-};  
+}; 
+
+// exports.getProfile = async (req, res) => {
+//   try {
+//     const user = await Auth.findById(req.user.id);
+//     if (!user) {
+//       return res.status(404).json({ message: "User not found" });
+//     }
+
+//     const profileData = {
+//       username: user.username,
+//       email: user.email,
+//       fotoProfil: user.fotoProfil
+//         ? `http://localhost:3000/${user.fotoProfil}` // Tambahkan URL base
+//         : null,
+//     };
+
+//     res.status(200).json(profileData);
+//   } catch (error) {
+//     res.status(500).json({ message: "Error fetching profile", error });
+//   }
+// };

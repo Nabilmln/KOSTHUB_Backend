@@ -29,12 +29,17 @@ const Auth = new mongoose.Schema({
   alamat: {
     type: String,
   },
-  gender : {
+  gender: {
     type: Boolean,
   },
-  bio : {
+  bio: {
     type: String,
     default: "",
+  },
+  fotoProfil: {
+    type: String,
+    default:  
+      "https://ia801001.us.archive.org/1/items/default_profile/images.png",
   },
   token: {
     type: String,
