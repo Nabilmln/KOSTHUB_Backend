@@ -4,7 +4,12 @@ const KosSchema = new mongoose.Schema({
   id_kos: { type: Number, required: true, unique: true },
   nama_kos: { type: String, required: true },
   alamat: { type: String, required: true },
-  fasilitas: { type: [String], default: [] }, // Contoh: ["Wifi", "Kasur"]
+  fasilitas: [
+    {
+      nama: { type: String, required: true },
+      jumlah: { type: Number, required: true },
+    },
+  ],
   harga_perbulan: { type: Number, required: true },
   harga_pertahun: { type: Number, required: true },
   kontak: {
