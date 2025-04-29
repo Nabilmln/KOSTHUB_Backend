@@ -7,7 +7,7 @@ const KosSchema = new mongoose.Schema({
   fasilitas: [
     {
       nama: { type: String, required: true },
-      jumlah: { type: Number, required: true },
+      jumlah: { type: String, required: true },
     },
   ],
   harga_perbulan: { type: Number, required: true },
