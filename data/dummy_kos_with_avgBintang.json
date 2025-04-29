@@ -4,8 +4,22 @@
     "nama_kos": "Kos Teratai Sejahtera",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Lueng Bata, Banda Aceh",
     "fasilitas": [
-      "Wifi",
-      "Kasur"
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": "2"
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": "2"
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": "2"
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": "2"
+      }
     ],
     "harga_perbulan": 493000,
     "harga_pertahun": 9614000,
@@ -192,12 +206,7 @@
     "id_kos": 2,
     "nama_kos": "Kos Cempaka Asri",
     "alamat": "Jl. M. Hasan, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Kasur",
-      "Wifi",
-      "Lemari"
-    ],
+    "fasilitas": ["Kamar Mandi", "Kasur", "Wifi", "Lemari"],
     "harga_perbulan": 557000,
     "harga_pertahun": 8504000,
     "kontak": {
@@ -473,11 +482,7 @@
     "id_kos": 3,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kamar Mandi",
-      "Wifi"
-    ],
+    "fasilitas": ["Lemari", "Kamar Mandi", "Wifi"],
     "harga_perbulan": 796000,
     "harga_pertahun": 10003000,
     "kontak": {
@@ -723,12 +728,7 @@
     "id_kos": 4,
     "nama_kos": "Kos Anggrek Putih",
     "alamat": "Jl. Teuku Umar, Kecamatan Baiturrahman, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kasur",
-      "Wifi",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Kasur", "Wifi", "Kamar Mandi"],
     "harga_perbulan": 454000,
     "harga_pertahun": 9570000,
     "kontak": {
@@ -894,12 +894,7 @@
     "id_kos": 5,
     "nama_kos": "Kos Teratai Putih",
     "alamat": "Jl. Teuku Umar, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Kasur",
-      "Lemari",
-      "Wifi"
-    ],
+    "fasilitas": ["Kamar Mandi", "Kasur", "Lemari", "Wifi"],
     "harga_perbulan": 538000,
     "harga_pertahun": 10040000,
     "kontak": {
@@ -1210,11 +1205,7 @@
     "id_kos": 6,
     "nama_kos": "Kos Sakura Sejahtera",
     "alamat": "Jl. Cut Nyak Dhien, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": [
-      "Wifi",
-      "Kasur",
-      "Lemari"
-    ],
+    "fasilitas": ["Wifi", "Kasur", "Lemari"],
     "harga_perbulan": 533000,
     "harga_pertahun": 9601000,
     "kontak": {
@@ -1435,11 +1426,7 @@
     "id_kos": 7,
     "nama_kos": "Kos Teratai Asri",
     "alamat": "Jl. Panglima Nyak Makam, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": [
-      "Kasur",
-      "Wifi",
-      "Lemari"
-    ],
+    "fasilitas": ["Kasur", "Wifi", "Lemari"],
     "harga_perbulan": 440000,
     "harga_pertahun": 4961000,
     "kontak": {
@@ -1600,10 +1587,7 @@
     "id_kos": 8,
     "nama_kos": "Kos Cempaka Putih",
     "alamat": "Jl. M. Hasan, Kecamatan Meuraxa, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Wifi"
-    ],
+    "fasilitas": ["Kamar Mandi", "Wifi"],
     "harga_perbulan": 684000,
     "harga_pertahun": 5896000,
     "kontak": {
@@ -1894,12 +1878,7 @@
     "id_kos": 9,
     "nama_kos": "Kos Teratai Berseri",
     "alamat": "Jl. Cut Nyak Dhien, Kecamatan Meuraxa, Banda Aceh",
-    "fasilitas": [
-      "Kasur",
-      "Wifi",
-      "Kamar Mandi",
-      "Lemari"
-    ],
+    "fasilitas": ["Kasur", "Wifi", "Kamar Mandi", "Lemari"],
     "harga_perbulan": 622000,
     "harga_pertahun": 10891000,
     "kontak": {
@@ -2195,10 +2174,7 @@
     "id_kos": 10,
     "nama_kos": "Kos Anggrek Sejahtera",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": [
-      "Kasur",
-      "Wifi"
-    ],
+    "fasilitas": ["Kasur", "Wifi"],
     "harga_perbulan": 416000,
     "harga_pertahun": 7787000,
     "kontak": {
@@ -2459,10 +2435,7 @@
     "id_kos": 11,
     "nama_kos": "Kos Kenanga Indah",
     "alamat": "Jl. Teuku Umar, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Lemari"
-    ],
+    "fasilitas": ["Kamar Mandi", "Lemari"],
     "harga_perbulan": 787000,
     "harga_pertahun": 8999000,
     "kontak": {
@@ -2723,10 +2696,7 @@
     "id_kos": 12,
     "nama_kos": "Kos Dahlia Berseri",
     "alamat": "Jl. Darussalam, Kecamatan Jaya Baru, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Wifi"
-    ],
+    "fasilitas": ["Lemari", "Wifi"],
     "harga_perbulan": 900000,
     "harga_pertahun": 5978000,
     "kontak": {
@@ -2977,12 +2947,7 @@
     "id_kos": 13,
     "nama_kos": "Kos Dahlia Putih",
     "alamat": "Jl. Pelajar, Kecamatan Meuraxa, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Lemari",
-      "Kasur",
-      "Wifi"
-    ],
+    "fasilitas": ["Kamar Mandi", "Lemari", "Kasur", "Wifi"],
     "harga_perbulan": 551000,
     "harga_pertahun": 10759000,
     "kontak": {
@@ -3143,12 +3108,7 @@
     "id_kos": 14,
     "nama_kos": "Kos Cempaka Putih",
     "alamat": "Jl. Teuku Umar, Kecamatan Kuta Alam, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Kasur",
-      "Wifi",
-      "Lemari"
-    ],
+    "fasilitas": ["Kamar Mandi", "Kasur", "Wifi", "Lemari"],
     "harga_perbulan": 437000,
     "harga_pertahun": 9104000,
     "kontak": {
@@ -3434,10 +3394,7 @@
     "id_kos": 15,
     "nama_kos": "Kos Jasmine Putih",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Banda Raya, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kasur"
-    ],
+    "fasilitas": ["Lemari", "Kasur"],
     "harga_perbulan": 768000,
     "harga_pertahun": 6380000,
     "kontak": {
@@ -3648,11 +3605,7 @@
     "id_kos": 16,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Pelajar, Kecamatan Ulee Kareng, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Kasur",
-      "Lemari"
-    ],
+    "fasilitas": ["Kamar Mandi", "Kasur", "Lemari"],
     "harga_perbulan": 918000,
     "harga_pertahun": 10314000,
     "kontak": {
@@ -3878,11 +3831,7 @@
     "id_kos": 17,
     "nama_kos": "Kos Tulip Asri",
     "alamat": "Jl. Pelajar, Kecamatan Baiturrahman, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Lemari",
-      "Kasur"
-    ],
+    "fasilitas": ["Kamar Mandi", "Lemari", "Kasur"],
     "harga_perbulan": 667000,
     "harga_pertahun": 11189000,
     "kontak": {
@@ -4123,11 +4072,7 @@
     "id_kos": 18,
     "nama_kos": "Kos Cempaka Asri",
     "alamat": "Jl. Tgk Daud Beureueh, Kecamatan Kuta Alam, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kasur",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Kasur", "Kamar Mandi"],
     "harga_perbulan": 457000,
     "harga_pertahun": 5047000,
     "kontak": {
@@ -4303,11 +4248,7 @@
     "id_kos": 19,
     "nama_kos": "Kos Sakura Berseri",
     "alamat": "Jl. M. Hasan, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kamar Mandi",
-      "Wifi"
-    ],
+    "fasilitas": ["Lemari", "Kamar Mandi", "Wifi"],
     "harga_perbulan": 936000,
     "harga_pertahun": 10234000,
     "kontak": {
@@ -4618,11 +4559,7 @@
     "id_kos": 20,
     "nama_kos": "Kos Mawar Asri",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Jaya Baru, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Wifi",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Wifi", "Kamar Mandi"],
     "harga_perbulan": 492000,
     "harga_pertahun": 5562000,
     "kontak": {
@@ -4808,10 +4745,7 @@
     "id_kos": 21,
     "nama_kos": "Kos Dahlia Asri",
     "alamat": "Jl. Darussalam, Kecamatan Ulee Kareng, Banda Aceh",
-    "fasilitas": [
-      "Wifi",
-      "Kasur"
-    ],
+    "fasilitas": ["Wifi", "Kasur"],
     "harga_perbulan": 609000,
     "harga_pertahun": 5838000,
     "kontak": {
@@ -4952,12 +4886,7 @@
     "id_kos": 22,
     "nama_kos": "Kos Tulip Asri",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kasur",
-      "Wifi",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Kasur", "Wifi", "Kamar Mandi"],
     "harga_perbulan": 692000,
     "harga_pertahun": 11577000,
     "kontak": {
@@ -5218,11 +5147,7 @@
     "id_kos": 23,
     "nama_kos": "Kos Jasmine Asri",
     "alamat": "Jl. Darussalam, Kecamatan Jaya Baru, Banda Aceh",
-    "fasilitas": [
-      "Wifi",
-      "Lemari",
-      "Kasur"
-    ],
+    "fasilitas": ["Wifi", "Lemari", "Kasur"],
     "harga_perbulan": 764000,
     "harga_pertahun": 9238000,
     "kontak": {
@@ -5428,11 +5353,7 @@
     "id_kos": 24,
     "nama_kos": "Kos Dahlia Asri",
     "alamat": "Jl. Teuku Umar, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Lemari",
-      "Kasur"
-    ],
+    "fasilitas": ["Kamar Mandi", "Lemari", "Kasur"],
     "harga_perbulan": 853000,
     "harga_pertahun": 11152000,
     "kontak": {
@@ -5713,12 +5634,7 @@
     "id_kos": 25,
     "nama_kos": "Kos Tulip Putih",
     "alamat": "Jl. Teuku Umar, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": [
-      "Wifi",
-      "Kamar Mandi",
-      "Lemari",
-      "Kasur"
-    ],
+    "fasilitas": ["Wifi", "Kamar Mandi", "Lemari", "Kasur"],
     "harga_perbulan": 967000,
     "harga_pertahun": 4969000,
     "kontak": {
@@ -5839,10 +5755,7 @@
     "id_kos": 26,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Pelajar, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Kamar Mandi"],
     "harga_perbulan": 862000,
     "harga_pertahun": 5041000,
     "kontak": {
@@ -5968,10 +5881,7 @@
     "id_kos": 27,
     "nama_kos": "Kos Mawar Berseri",
     "alamat": "Jl. Pelajar, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kasur"
-    ],
+    "fasilitas": ["Lemari", "Kasur"],
     "harga_perbulan": 884000,
     "harga_pertahun": 8777000,
     "kontak": {
@@ -6142,11 +6052,7 @@
     "id_kos": 28,
     "nama_kos": "Kos Teratai Asri",
     "alamat": "Jl. Cut Nyak Dhien, Kecamatan Kuta Alam, Banda Aceh",
-    "fasilitas": [
-      "Kasur",
-      "Wifi",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Kasur", "Wifi", "Kamar Mandi"],
     "harga_perbulan": 624000,
     "harga_pertahun": 10208000,
     "kontak": {
@@ -6407,12 +6313,7 @@
     "id_kos": 29,
     "nama_kos": "Kos Dahlia Putih",
     "alamat": "Jl. Cut Nyak Dhien, Kecamatan Ulee Kareng, Banda Aceh",
-    "fasilitas": [
-      "Kasur",
-      "Wifi",
-      "Kamar Mandi",
-      "Lemari"
-    ],
+    "fasilitas": ["Kasur", "Wifi", "Kamar Mandi", "Lemari"],
     "harga_perbulan": 967000,
     "harga_pertahun": 9267000,
     "kontak": {
@@ -6713,11 +6614,7 @@
     "id_kos": 30,
     "nama_kos": "Kos Cempaka Putih",
     "alamat": "Jl. Tgk Daud Beureueh, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Wifi",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Wifi", "Kamar Mandi"],
     "harga_perbulan": 707000,
     "harga_pertahun": 9037000,
     "kontak": {
@@ -6913,11 +6810,7 @@
     "id_kos": 31,
     "nama_kos": "Kos Anggrek Berseri",
     "alamat": "Jl. Pelajar, Kecamatan Banda Raya, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Kasur",
-      "Wifi"
-    ],
+    "fasilitas": ["Lemari", "Kasur", "Wifi"],
     "harga_perbulan": 851000,
     "harga_pertahun": 8840000,
     "kontak": {
@@ -7033,10 +6926,7 @@
     "id_kos": 32,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Darussalam, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Kasur"
-    ],
+    "fasilitas": ["Kamar Mandi", "Kasur"],
     "harga_perbulan": 706000,
     "harga_pertahun": 11901000,
     "kontak": {
@@ -7252,12 +7142,7 @@
     "id_kos": 33,
     "nama_kos": "Kos Teratai Putih",
     "alamat": "Jl. M. Hasan, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": [
-      "Kasur",
-      "Wifi",
-      "Kamar Mandi",
-      "Lemari"
-    ],
+    "fasilitas": ["Kasur", "Wifi", "Kamar Mandi", "Lemari"],
     "harga_perbulan": 792000,
     "harga_pertahun": 6289000,
     "kontak": {
@@ -7473,12 +7358,7 @@
     "id_kos": 34,
     "nama_kos": "Kos Dahlia Indah",
     "alamat": "Jl. Teuku Umar, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Kasur",
-      "Lemari",
-      "Wifi"
-    ],
+    "fasilitas": ["Kamar Mandi", "Kasur", "Lemari", "Wifi"],
     "harga_perbulan": 540000,
     "harga_pertahun": 9409000,
     "kontak": {
@@ -7764,12 +7644,7 @@
     "id_kos": 35,
     "nama_kos": "Kos Teratai Asri",
     "alamat": "Jl. M. Hasan, Kecamatan Meuraxa, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Wifi",
-      "Kasur",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Wifi", "Kasur", "Kamar Mandi"],
     "harga_perbulan": 781000,
     "harga_pertahun": 4907000,
     "kontak": {
@@ -7935,11 +7810,7 @@
     "id_kos": 36,
     "nama_kos": "Kos Jasmine Sejahtera",
     "alamat": "Jl. Teuku Umar, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Wifi",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Wifi", "Kamar Mandi"],
     "harga_perbulan": 774000,
     "harga_pertahun": 11822000,
     "kontak": {
@@ -8115,11 +7986,7 @@
     "id_kos": 37,
     "nama_kos": "Kos Mawar Asri",
     "alamat": "Jl. Pelajar, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Wifi",
-      "Kasur"
-    ],
+    "fasilitas": ["Lemari", "Wifi", "Kasur"],
     "harga_perbulan": 458000,
     "harga_pertahun": 4842000,
     "kontak": {
@@ -8330,12 +8197,7 @@
     "id_kos": 38,
     "nama_kos": "Kos Dahlia Sejahtera",
     "alamat": "Jl. Pelajar, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": [
-      "Kamar Mandi",
-      "Lemari",
-      "Wifi",
-      "Kasur"
-    ],
+    "fasilitas": ["Kamar Mandi", "Lemari", "Wifi", "Kasur"],
     "harga_perbulan": 848000,
     "harga_pertahun": 10693000,
     "kontak": {
@@ -8636,10 +8498,7 @@
     "id_kos": 39,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Panglima Nyak Makam, Kecamatan Jaya Baru, Banda Aceh",
-    "fasilitas": [
-      "Kasur",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Kasur", "Kamar Mandi"],
     "harga_perbulan": 757000,
     "harga_pertahun": 10605000,
     "kontak": {
@@ -8880,12 +8739,7 @@
     "id_kos": 40,
     "nama_kos": "Kos Melati Indah",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": [
-      "Lemari",
-      "Wifi",
-      "Kasur",
-      "Kamar Mandi"
-    ],
+    "fasilitas": ["Lemari", "Wifi", "Kasur", "Kamar Mandi"],
     "harga_perbulan": 985000,
     "harga_pertahun": 10347000,
     "kontak": {

@@ -38,8 +38,6 @@ const Auth = new mongoose.Schema({
   },
   fotoProfil: {
     type: String,
-    default:  
-      "https://ia801001.us.archive.org/1/items/default_profile/images.png",
   },
   token: {
     type: String,
