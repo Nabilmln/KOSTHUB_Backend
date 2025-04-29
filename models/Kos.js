@@ -16,7 +16,7 @@ const KosSchema = new mongoose.Schema({
     email: { type: String, required: true },
     nomor: { type: String, required: true },
   },
-  avgBintang: { type: Number, default: 0 }, // Rata-rata rating dari 1 hingga 5
+  avgBintang: { type: Number, default: 0 }, 
   image: [
     {
       url: { type: String, required: true },
@@ -27,8 +27,10 @@ const KosSchema = new mongoose.Schema({
   ulasan: [
     {
       nama: { type: String, required: true },
-      bintang: { type: Number, required: true }, // Rating dari 1 hingga 5
+      bintang: { type: Number, required: true }, 
       komentar: { type: String, required: true },
+      tanggal: { type: Date, default: Date.now },
+      imageUlasan: {url: { type: String, required: true } },
     },
   ],
 });
