@@ -106,7 +106,7 @@ exports.changePassword = async (req, res) => {
 };
 
 exports.updateProfile = async (req, res) => {
-  const { username, email, fotoProfil, ...updates } = req.body; // Ambil username, email, foto profil, dan atribut lainnya
+  const { username, ...updates } = req.body; // Ambil username, email, foto profil, dan atribut lainnya
 
   try {
     // Cari user berdasarkan ID (dari token)
