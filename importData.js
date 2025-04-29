@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const Kos = require("./models/Kos");
-const data = require("./data/dummy_kos_with_reviews_and_deskripsi.json");
+const data = require("./data/kos_final.json");
 
 dotenv.config(); // Load .env file
 

@@ -30,7 +30,7 @@ const KosSchema = new mongoose.Schema({
       bintang: { type: Number, required: true },
       komentar: { type: String, required: true },
       tanggal: { type: Date, default: Date.now },
-      imageUlasan: { url: { type: String, required: true } },
+      imageUlasan: { type: String, required: true } ,
     },
   ],
 });
