@@ -125,23 +125,23 @@ exports.updateProfile = async (req, res) => {
     }
 
     // Periksa apakah email baru sudah digunakan oleh user lain
-    if (email && email !== user.email) {
-      const existingEmail = await Auth.findOne({ email });
-      if (existingEmail) {
-        return res.status(400).json({ message: "Email already exists" });
-      }
-      user.email = email; // Perbarui email
-    }
+    // if (email && email !== user.email) {
+    //   const existingEmail = await Auth.findOne({ email });
+    //   if (existingEmail) {
+    //     return res.status(400).json({ message: "Email already exists" });
+    //   }
+    //   user.email = email; // Perbarui email
+    // }
 
     // Perbarui foto profil jika ada
-    if (fotoProfil) {
-      user.fotoProfil = fotoProfil; // Simpan URL atau path foto profil
-    }
+    // if (fotoProfil) {
+    //   user.fotoProfil = fotoProfil; // Simpan URL atau path foto profil
+    // }
 
     // Perbarui foto profil jika ada file yang diunggah
-    if (req.file) {
-      user.fotoProfil = req.file.path; // Simpan path file yang diunggah
-    }
+    // if (req.file) {
+    //   user.fotoProfil = req.file.path; // Simpan path file yang diunggah
+    // }
 
     // Perbarui atribut lainnya
     Object.keys(updates).forEach((key) => {
