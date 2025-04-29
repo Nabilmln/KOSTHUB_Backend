@@ -100,3 +100,55 @@ exports.filterKos = async (req, res) => {
   }
 };
 
+exports.addReview = async (req, res) => {
+  const { id_kos } = req.params; // Ambil id_kos dari parameter URL
+  const { bintang, komentar } = req.body; // Data ulasan dari body request
+
+  try {
+    // Validasi input
+    if (!bintang || bintang < 1 || bintang > 5) {
+      return res
+        .status(400)
+        .json({ message: "Rating harus antara 1 hingga 5" });
+    }
+
+    if (!komentar || komentar.trim() === "") {
+      return res.status(400).json({ message: "Komentar tidak boleh kosong" });
+    }
+
+    // Cari kos berdasarkan id_kos
+    const kos = await Kos.findOne({ id_kos });
+    if (!kos) {
+      return res.status(404).json({ message: "Kos not found" });
+    }
+
+    // Tambahkan ulasan baru ke array ulasan
+    const newReview = {
+      nama: req.user.username,
+      bintang,
+      komentar,
+      imageUlasan: req.file ? req.file.path : null, // URL gambar ulasan (jika ada)
+      tanggal: new Date(), // Tanggal ulasan
+    };
+
+    kos.ulasan.push(newReview);
+
+    // Hitung rata-rata bintang baru
+    const totalBintang = kos.ulasan.reduce(
+      (sum, review) => sum + review.bintang,
+      0
+    );
+    kos.avgBintang = totalBintang / kos.ulasan.length;
+
+    await kos.save();
+
+    res
+      .status(200)
+      .json({ message: "Review added successfully", review: newReview });
+  } catch (error) {
+    console.error("Error adding review for kos ID:", id_kos, error);
+    res
+      .status(500)
+      .json({ message: "Error adding review", error: error.message });
+  }
+};
