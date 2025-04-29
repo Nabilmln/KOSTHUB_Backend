@@ -6,16 +6,35 @@ const Kos = require("../models/Kos");
 
 exports.register = async (req, res) => {
   try {
-    const { username, email, password, fullname, nomor, tanggal_lahir, alamat, gender } = req.body;
+    const {
+      username,
+      email,
+      password,
+      fullname,
+      nomor,
+      tanggal_lahir,
+      alamat,
+      gender,
+    } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
     let realGernder = gender === "Laki" ? true : false;
 
-    if (!username || !email || !password || !fullname || !nomor || !tanggal_lahir || !alamat ) {
+    if (
+      !username ||
+      !email ||
+      !password ||
+      !fullname ||
+      !nomor ||
+      !tanggal_lahir ||
+      !alamat
+    ) {
       return res.status(400).json({ message: "All fields are required" });
     }
     const existingUser = await Auth.findOne({ $or: [{ username }, { email }] });
     if (existingUser) {
-      return res.status(400).json({ message: "Username or email already exists" });
+      return res
+        .status(400)
+        .json({ message: "Username or email already exists" });
     }
 
     const newUser = new Auth({
@@ -31,11 +50,13 @@ exports.register = async (req, res) => {
     });
 
     await newUser.save();
-    res.status(201).json({ data:newUser, message: "User created successfully" });
+    res
+      .status(201)
+      .json({ data: newUser, message: "User created successfully" });
   } catch (error) {
     res.status(500).json({ message: "Error creating user", error });
   }
-}
+};
 
 exports.login = async (req, res) => {
   try {
@@ -51,12 +72,14 @@ exports.login = async (req, res) => {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
     res.json({ token, user });
   } catch (error) {
     res.status(500).json({ message: "Error logging in", error });
   }
-}
+};
 
 exports.changePassword = async (req, res) => {
   verifyToken(req, res, async () => {
@@ -80,10 +103,10 @@ exports.changePassword = async (req, res) => {
       res.status(500).json({ message: "Error changing password", error });
     }
   });
-}
+};
 
 exports.updateProfile = async (req, res) => {
-  const { username, ...updates } = req.body; // Ambil username, email, foto profil, dan atribut lainnya
+  const { username, email, fotoProfil, ...updates } = req.body; // Ambil username, email, foto profil, dan atribut lainnya
 
   try {
     // Cari user berdasarkan ID (dari token)
@@ -131,10 +154,12 @@ exports.updateProfile = async (req, res) => {
 
     res.status(200).json({ message: "Profile updated successfully", user });
   } catch (error) {
-  console.error("Error updating profile:", error); // Cetak error ke konsol
-  res.status(500).json({ message: "Error updating profile", error: error.message });
+    console.error("Error updating profile:", error); // Cetak error ke konsol
+    res
+      .status(500)
+      .json({ message: "Error updating profile", error: error.message });
   }
-}; 
+};
 
 exports.saveKos = async (req, res) => {
   const { id_kos } = req.params; // Ambil id_kos dari parameter URL
