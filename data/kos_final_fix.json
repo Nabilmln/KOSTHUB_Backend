@@ -3,7 +3,24 @@
     "id_kos": 1,
     "nama_kos": "Kos Teratai Sejahtera",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": ["Wifi", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 43
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 43
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 43
+      }
+    ],
     "harga_perbulan": 493000,
     "harga_pertahun": 9614000,
     "kontak": {
@@ -252,34 +269,43 @@
     ],
     "deskripsi": "Hunian yang nyaman dengan sistem keamanan 24 jam.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos1/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos1/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos1/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos1/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos1/gambar5.jpg",
-        "isThumbnail": true
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos1/gambar5.jpg",
+      "gallery": [
+        "images/kos1/gambar1.jpg",
+        "images/kos1/gambar2.jpg",
+        "images/kos1/gambar3.jpg",
+        "images/kos1/gambar4.jpg",
+        "images/kos1/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 2,
     "nama_kos": "Kos Cempaka Asri",
     "alamat": "Jl. M. Hasan, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Kasur", "Wifi", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 24
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 24
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 24
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 24
+      }
+    ],
     "harga_perbulan": 557000,
     "harga_pertahun": 8504000,
     "kontak": {
@@ -654,34 +680,43 @@
     ],
     "deskripsi": "Pilihan tepat untuk tinggal jangka panjang di Banda Aceh.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos2/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos2/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos2/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos2/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos2/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos2/gambar1.jpg",
+      "gallery": [
+        "images/kos2/gambar1.jpg",
+        "images/kos2/gambar2.jpg",
+        "images/kos2/gambar3.jpg",
+        "images/kos2/gambar4.jpg",
+        "images/kos2/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 3,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": ["Lemari", "Kamar Mandi", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 49
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 49
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 49
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 49
+      }
+    ],
     "harga_perbulan": 796000,
     "harga_pertahun": 10003000,
     "kontak": {
@@ -1014,34 +1049,43 @@
     ],
     "deskripsi": "Lingkungan bersih dan aman, cocok untuk mahasiswa maupun pekerja.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos3/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos3/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos3/gambar3.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos3/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos3/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos3/gambar3.jpg",
+      "gallery": [
+        "images/kos3/gambar1.jpg",
+        "images/kos3/gambar2.jpg",
+        "images/kos3/gambar3.jpg",
+        "images/kos3/gambar4.jpg",
+        "images/kos3/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 4,
     "nama_kos": "Kos Anggrek Putih",
     "alamat": "Jl. Teuku Umar, Kecamatan Baiturrahman, Banda Aceh",
-    "fasilitas": ["Lemari", "Kasur", "Wifi", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 35
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 35
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 35
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 35
+      }
+    ],
     "harga_perbulan": 454000,
     "harga_pertahun": 9570000,
     "kontak": {
@@ -1262,34 +1306,43 @@
     ],
     "deskripsi": "Fasilitas modern dan pelayanan ramah dari pemilik kos.",
     "avgBintang": 2,
-    "image": [
-      {
-        "url": "images/kos4/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos4/gambar2.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos4/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos4/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos4/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos4/gambar2.jpg",
+      "gallery": [
+        "images/kos4/gambar1.jpg",
+        "images/kos4/gambar2.jpg",
+        "images/kos4/gambar3.jpg",
+        "images/kos4/gambar4.jpg",
+        "images/kos4/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 5,
     "nama_kos": "Kos Teratai Putih",
     "alamat": "Jl. Teuku Umar, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Kasur", "Lemari", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 32
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 32
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 32
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 32
+      }
+    ],
     "harga_perbulan": 538000,
     "harga_pertahun": 10040000,
     "kontak": {
@@ -1713,34 +1766,43 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos5/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos5/gambar2.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos5/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos5/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos5/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos5/gambar2.jpg",
+      "gallery": [
+        "images/kos5/gambar1.jpg",
+        "images/kos5/gambar2.jpg",
+        "images/kos5/gambar3.jpg",
+        "images/kos5/gambar4.jpg",
+        "images/kos5/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 6,
     "nama_kos": "Kos Sakura Sejahtera",
     "alamat": "Jl. Cut Nyak Dhien, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": ["Wifi", "Kasur", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 42
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 42
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 42
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 42
+      }
+    ],
     "harga_perbulan": 533000,
     "harga_pertahun": 9601000,
     "kontak": {
@@ -2038,34 +2100,43 @@
     ],
     "deskripsi": "Pilihan tepat untuk tinggal jangka panjang di Banda Aceh.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos6/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos6/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos6/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos6/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos6/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos6/gambar1.jpg",
+      "gallery": [
+        "images/kos6/gambar1.jpg",
+        "images/kos6/gambar2.jpg",
+        "images/kos6/gambar3.jpg",
+        "images/kos6/gambar4.jpg",
+        "images/kos6/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 7,
     "nama_kos": "Kos Teratai Asri",
     "alamat": "Jl. Panglima Nyak Makam, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": ["Kasur", "Wifi", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Kasur",
+        "jumlah": 21
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 21
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 21
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 21
+      }
+    ],
     "harga_perbulan": 440000,
     "harga_pertahun": 4961000,
     "kontak": {
@@ -2279,34 +2350,39 @@
     ],
     "deskripsi": "Lingkungan bersih dan aman, cocok untuk mahasiswa maupun pekerja.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos7/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos7/gambar2.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos7/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos7/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos7/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos7/gambar2.jpg",
+      "gallery": [
+        "images/kos7/gambar1.jpg",
+        "images/kos7/gambar2.jpg",
+        "images/kos7/gambar3.jpg",
+        "images/kos7/gambar4.jpg",
+        "images/kos7/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 8,
     "nama_kos": "Kos Cempaka Putih",
     "alamat": "Jl. M. Hasan, Kecamatan Meuraxa, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 41
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 41
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 41
+      }
+    ],
     "harga_perbulan": 684000,
     "harga_pertahun": 5896000,
     "kontak": {
@@ -2702,34 +2778,43 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos8/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos8/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos8/gambar3.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos8/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos8/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos8/gambar3.jpg",
+      "gallery": [
+        "images/kos8/gambar1.jpg",
+        "images/kos8/gambar2.jpg",
+        "images/kos8/gambar3.jpg",
+        "images/kos8/gambar4.jpg",
+        "images/kos8/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 9,
     "nama_kos": "Kos Teratai Berseri",
     "alamat": "Jl. Cut Nyak Dhien, Kecamatan Meuraxa, Banda Aceh",
-    "fasilitas": ["Kasur", "Wifi", "Kamar Mandi", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Kasur",
+        "jumlah": 10
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 10
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 10
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 10
+      }
+    ],
     "harga_perbulan": 622000,
     "harga_pertahun": 10891000,
     "kontak": {
@@ -3132,34 +3217,39 @@
     ],
     "deskripsi": "Kos nyaman dengan fasilitas lengkap dan lingkungan yang tenang.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos9/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos9/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos9/gambar3.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos9/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos9/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos9/gambar3.jpg",
+      "gallery": [
+        "images/kos9/gambar1.jpg",
+        "images/kos9/gambar2.jpg",
+        "images/kos9/gambar3.jpg",
+        "images/kos9/gambar4.jpg",
+        "images/kos9/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 10,
     "nama_kos": "Kos Anggrek Sejahtera",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": ["Kasur", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Kasur",
+        "jumlah": 12
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 12
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 12
+      }
+    ],
     "harga_perbulan": 416000,
     "harga_pertahun": 7787000,
     "kontak": {
@@ -3513,34 +3603,39 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos10/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos10/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos10/gambar3.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos10/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos10/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos10/gambar3.jpg",
+      "gallery": [
+        "images/kos10/gambar1.jpg",
+        "images/kos10/gambar2.jpg",
+        "images/kos10/gambar3.jpg",
+        "images/kos10/gambar4.jpg",
+        "images/kos10/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 11,
     "nama_kos": "Kos Kenanga Indah",
     "alamat": "Jl. Teuku Umar, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 16
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 16
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 16
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 16
+      }
+    ],
     "harga_perbulan": 787000,
     "harga_pertahun": 8999000,
     "kontak": {
@@ -3894,34 +3989,43 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos11/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos11/gambar2.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos11/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos11/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos11/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos11/gambar2.jpg",
+      "gallery": [
+        "images/kos11/gambar1.jpg",
+        "images/kos11/gambar2.jpg",
+        "images/kos11/gambar3.jpg",
+        "images/kos11/gambar4.jpg",
+        "images/kos11/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 12,
     "nama_kos": "Kos Dahlia Berseri",
     "alamat": "Jl. Darussalam, Kecamatan Jaya Baru, Banda Aceh",
-    "fasilitas": ["Lemari", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 30
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 30
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 30
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 30
+      }
+    ],
     "harga_perbulan": 900000,
     "harga_pertahun": 5978000,
     "kontak": {
@@ -4261,34 +4365,43 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos12/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos12/gambar2.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos12/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos12/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos12/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos12/gambar2.jpg",
+      "gallery": [
+        "images/kos12/gambar1.jpg",
+        "images/kos12/gambar2.jpg",
+        "images/kos12/gambar3.jpg",
+        "images/kos12/gambar4.jpg",
+        "images/kos12/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 13,
     "nama_kos": "Kos Dahlia Putih",
     "alamat": "Jl. Pelajar, Kecamatan Meuraxa, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Lemari", "Kasur", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 27
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 27
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 27
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 27
+      }
+    ],
     "harga_perbulan": 551000,
     "harga_pertahun": 10759000,
     "kontak": {
@@ -4502,34 +4615,43 @@
     ],
     "deskripsi": "Kos nyaman dengan fasilitas lengkap dan lingkungan yang tenang.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos13/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos13/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos13/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos13/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos13/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos13/gambar1.jpg",
+      "gallery": [
+        "images/kos13/gambar1.jpg",
+        "images/kos13/gambar2.jpg",
+        "images/kos13/gambar3.jpg",
+        "images/kos13/gambar4.jpg",
+        "images/kos13/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 14,
     "nama_kos": "Kos Cempaka Putih",
     "alamat": "Jl. Teuku Umar, Kecamatan Kuta Alam, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Kasur", "Wifi", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 34
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 34
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 34
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 34
+      }
+    ],
     "harga_perbulan": 437000,
     "harga_pertahun": 9104000,
     "kontak": {
@@ -4918,34 +5040,39 @@
     ],
     "deskripsi": "Tempat tinggal strategis dekat kampus dan pusat kota.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos14/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos14/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos14/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos14/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos14/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos14/gambar1.jpg",
+      "gallery": [
+        "images/kos14/gambar1.jpg",
+        "images/kos14/gambar2.jpg",
+        "images/kos14/gambar3.jpg",
+        "images/kos14/gambar4.jpg",
+        "images/kos14/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 15,
     "nama_kos": "Kos Jasmine Putih",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Banda Raya, Banda Aceh",
-    "fasilitas": ["Lemari", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 48
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 48
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 48
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 48
+      }
+    ],
     "harga_perbulan": 768000,
     "harga_pertahun": 6380000,
     "kontak": {
@@ -5229,34 +5356,39 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos15/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos15/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos15/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos15/gambar4.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos15/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos15/gambar4.jpg",
+      "gallery": [
+        "images/kos15/gambar1.jpg",
+        "images/kos15/gambar2.jpg",
+        "images/kos15/gambar3.jpg",
+        "images/kos15/gambar4.jpg",
+        "images/kos15/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 16,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Pelajar, Kecamatan Ulee Kareng, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Kasur", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 16
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 16
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 16
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 16
+      }
+    ],
     "harga_perbulan": 918000,
     "harga_pertahun": 10314000,
     "kontak": {
@@ -5561,34 +5693,39 @@
     ],
     "deskripsi": "Hunian yang nyaman dengan sistem keamanan 24 jam.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos16/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos16/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos16/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos16/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos16/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos16/gambar1.jpg",
+      "gallery": [
+        "images/kos16/gambar1.jpg",
+        "images/kos16/gambar2.jpg",
+        "images/kos16/gambar3.jpg",
+        "images/kos16/gambar4.jpg",
+        "images/kos16/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 17,
     "nama_kos": "Kos Tulip Asri",
     "alamat": "Jl. Pelajar, Kecamatan Baiturrahman, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Lemari", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 41
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 41
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 41
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 41
+      }
+    ],
     "harga_perbulan": 667000,
     "harga_pertahun": 11189000,
     "kontak": {
@@ -5914,34 +6051,39 @@
     ],
     "deskripsi": "Kos harian dan bulanan yang fleksibel dengan harga terjangkau.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos17/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos17/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos17/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos17/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos17/gambar5.jpg",
-        "isThumbnail": true
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos17/gambar5.jpg",
+      "gallery": [
+        "images/kos17/gambar1.jpg",
+        "images/kos17/gambar2.jpg",
+        "images/kos17/gambar3.jpg",
+        "images/kos17/gambar4.jpg",
+        "images/kos17/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 18,
     "nama_kos": "Kos Cempaka Asri",
     "alamat": "Jl. Tgk Daud Beureueh, Kecamatan Kuta Alam, Banda Aceh",
-    "fasilitas": ["Lemari", "Kasur", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 42
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 42
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 42
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 42
+      }
+    ],
     "harga_perbulan": 457000,
     "harga_pertahun": 5047000,
     "kontak": {
@@ -6176,34 +6318,43 @@
     ],
     "deskripsi": "Kos nyaman dengan fasilitas lengkap dan lingkungan yang tenang.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos18/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos18/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos18/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos18/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos18/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos18/gambar1.jpg",
+      "gallery": [
+        "images/kos18/gambar1.jpg",
+        "images/kos18/gambar2.jpg",
+        "images/kos18/gambar3.jpg",
+        "images/kos18/gambar4.jpg",
+        "images/kos18/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 19,
     "nama_kos": "Kos Sakura Berseri",
     "alamat": "Jl. M. Hasan, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": ["Lemari", "Kamar Mandi", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 32
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 32
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 32
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 32
+      }
+    ],
     "harga_perbulan": 936000,
     "harga_pertahun": 10234000,
     "kontak": {
@@ -6627,34 +6778,43 @@
     ],
     "deskripsi": "Cocok untuk mahasiswa, tersedia WiFi cepat dan kamar luas.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos19/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos19/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos19/gambar3.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos19/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos19/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos19/gambar3.jpg",
+      "gallery": [
+        "images/kos19/gambar1.jpg",
+        "images/kos19/gambar2.jpg",
+        "images/kos19/gambar3.jpg",
+        "images/kos19/gambar4.jpg",
+        "images/kos19/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 20,
     "nama_kos": "Kos Mawar Asri",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Jaya Baru, Banda Aceh",
-    "fasilitas": ["Lemari", "Wifi", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 38
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 38
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 38
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 38
+      }
+    ],
     "harga_perbulan": 492000,
     "harga_pertahun": 5562000,
     "kontak": {
@@ -6903,34 +7063,39 @@
     ],
     "deskripsi": "Fasilitas modern dan pelayanan ramah dari pemilik kos.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos20/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos20/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos20/gambar3.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos20/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos20/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos20/gambar3.jpg",
+      "gallery": [
+        "images/kos20/gambar1.jpg",
+        "images/kos20/gambar2.jpg",
+        "images/kos20/gambar3.jpg",
+        "images/kos20/gambar4.jpg",
+        "images/kos20/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 21,
     "nama_kos": "Kos Dahlia Asri",
     "alamat": "Jl. Darussalam, Kecamatan Ulee Kareng, Banda Aceh",
-    "fasilitas": ["Wifi", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 14
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 14
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 14
+      }
+    ],
     "harga_perbulan": 609000,
     "harga_pertahun": 5838000,
     "kontak": {
@@ -7116,34 +7281,43 @@
     ],
     "deskripsi": "Cocok untuk mahasiswa, tersedia WiFi cepat dan kamar luas.",
     "avgBintang": 4,
-    "image": [
-      {
-        "url": "images/kos21/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos21/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos21/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos21/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos21/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos21/gambar1.jpg",
+      "gallery": [
+        "images/kos21/gambar1.jpg",
+        "images/kos21/gambar2.jpg",
+        "images/kos21/gambar3.jpg",
+        "images/kos21/gambar4.jpg",
+        "images/kos21/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 22,
     "nama_kos": "Kos Tulip Asri",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": ["Lemari", "Kasur", "Wifi", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 17
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 17
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 17
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 17
+      }
+    ],
     "harga_perbulan": 692000,
     "harga_pertahun": 11577000,
     "kontak": {
@@ -7497,34 +7671,43 @@
     ],
     "deskripsi": "Kos nyaman dengan fasilitas lengkap dan lingkungan yang tenang.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos22/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos22/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos22/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos22/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos22/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos22/gambar1.jpg",
+      "gallery": [
+        "images/kos22/gambar1.jpg",
+        "images/kos22/gambar2.jpg",
+        "images/kos22/gambar3.jpg",
+        "images/kos22/gambar4.jpg",
+        "images/kos22/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 23,
     "nama_kos": "Kos Jasmine Asri",
     "alamat": "Jl. Darussalam, Kecamatan Jaya Baru, Banda Aceh",
-    "fasilitas": ["Wifi", "Lemari", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 31
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 31
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 31
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 31
+      }
+    ],
     "harga_perbulan": 764000,
     "harga_pertahun": 9238000,
     "kontak": {
@@ -7801,34 +7984,39 @@
     ],
     "deskripsi": "Tempat tinggal strategis dekat kampus dan pusat kota.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos23/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos23/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos23/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos23/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos23/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos23/gambar1.jpg",
+      "gallery": [
+        "images/kos23/gambar1.jpg",
+        "images/kos23/gambar2.jpg",
+        "images/kos23/gambar3.jpg",
+        "images/kos23/gambar4.jpg",
+        "images/kos23/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 24,
     "nama_kos": "Kos Dahlia Asri",
     "alamat": "Jl. Teuku Umar, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Lemari", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 17
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 17
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 17
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 17
+      }
+    ],
     "harga_perbulan": 853000,
     "harga_pertahun": 11152000,
     "kontak": {
@@ -8210,34 +8398,43 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos24/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos24/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos24/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos24/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos24/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos24/gambar1.jpg",
+      "gallery": [
+        "images/kos24/gambar1.jpg",
+        "images/kos24/gambar2.jpg",
+        "images/kos24/gambar3.jpg",
+        "images/kos24/gambar4.jpg",
+        "images/kos24/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 25,
     "nama_kos": "Kos Tulip Putih",
     "alamat": "Jl. Teuku Umar, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": ["Wifi", "Kamar Mandi", "Lemari", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 19
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 19
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 19
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 19
+      }
+    ],
     "harga_perbulan": 967000,
     "harga_pertahun": 4969000,
     "kontak": {
@@ -8395,34 +8592,39 @@
     ],
     "deskripsi": "Kos harian dan bulanan yang fleksibel dengan harga terjangkau.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos25/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos25/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos25/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos25/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos25/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos25/gambar1.jpg",
+      "gallery": [
+        "images/kos25/gambar1.jpg",
+        "images/kos25/gambar2.jpg",
+        "images/kos25/gambar3.jpg",
+        "images/kos25/gambar4.jpg",
+        "images/kos25/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 26,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Pelajar, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": ["Lemari", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 45
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 45
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 45
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 45
+      }
+    ],
     "harga_perbulan": 862000,
     "harga_pertahun": 5041000,
     "kontak": {
@@ -8587,34 +8789,39 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos26/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos26/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos26/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos26/gambar4.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos26/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos26/gambar4.jpg",
+      "gallery": [
+        "images/kos26/gambar1.jpg",
+        "images/kos26/gambar2.jpg",
+        "images/kos26/gambar3.jpg",
+        "images/kos26/gambar4.jpg",
+        "images/kos26/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 27,
     "nama_kos": "Kos Mawar Berseri",
     "alamat": "Jl. Pelajar, Kecamatan Lueng Bata, Banda Aceh",
-    "fasilitas": ["Lemari", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 14
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 14
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 14
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 14
+      }
+    ],
     "harga_perbulan": 884000,
     "harga_pertahun": 8777000,
     "kontak": {
@@ -8842,34 +9049,39 @@
     ],
     "deskripsi": "Lingkungan bersih dan aman, cocok untuk mahasiswa maupun pekerja.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos27/gambar1.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos27/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos27/gambar3.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos27/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos27/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos27/gambar3.jpg",
+      "gallery": [
+        "images/kos27/gambar1.jpg",
+        "images/kos27/gambar2.jpg",
+        "images/kos27/gambar3.jpg",
+        "images/kos27/gambar4.jpg",
+        "images/kos27/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 28,
     "nama_kos": "Kos Teratai Asri",
     "alamat": "Jl. Cut Nyak Dhien, Kecamatan Kuta Alam, Banda Aceh",
-    "fasilitas": ["Kasur", "Wifi", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Kasur",
+        "jumlah": 11
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 11
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 11
+      }
+    ],
     "harga_perbulan": 624000,
     "harga_pertahun": 10208000,
     "kontak": {
@@ -9223,34 +9435,43 @@
     ],
     "deskripsi": "Dekat dengan pusat perbelanjaan dan rumah sakit.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos28/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos28/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos28/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos28/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos28/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos28/gambar1.jpg",
+      "gallery": [
+        "images/kos28/gambar1.jpg",
+        "images/kos28/gambar2.jpg",
+        "images/kos28/gambar3.jpg",
+        "images/kos28/gambar4.jpg",
+        "images/kos28/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 29,
     "nama_kos": "Kos Dahlia Putih",
     "alamat": "Jl. Cut Nyak Dhien, Kecamatan Ulee Kareng, Banda Aceh",
-    "fasilitas": ["Kasur", "Wifi", "Kamar Mandi", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Kasur",
+        "jumlah": 27
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 27
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 27
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 27
+      }
+    ],
     "harga_perbulan": 967000,
     "harga_pertahun": 9267000,
     "kontak": {
@@ -9660,34 +9881,43 @@
     ],
     "deskripsi": "Fasilitas modern dan pelayanan ramah dari pemilik kos.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos29/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos29/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos29/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos29/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos29/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos29/gambar1.jpg",
+      "gallery": [
+        "images/kos29/gambar1.jpg",
+        "images/kos29/gambar2.jpg",
+        "images/kos29/gambar3.jpg",
+        "images/kos29/gambar4.jpg",
+        "images/kos29/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 30,
     "nama_kos": "Kos Cempaka Putih",
     "alamat": "Jl. Tgk Daud Beureueh, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": ["Lemari", "Wifi", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 50
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 50
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 50
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 50
+      }
+    ],
     "harga_perbulan": 707000,
     "harga_pertahun": 9037000,
     "kontak": {
@@ -9950,34 +10180,43 @@
     ],
     "deskripsi": "Fasilitas modern dan pelayanan ramah dari pemilik kos.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos30/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos30/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos30/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos30/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos30/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos30/gambar1.jpg",
+      "gallery": [
+        "images/kos30/gambar1.jpg",
+        "images/kos30/gambar2.jpg",
+        "images/kos30/gambar3.jpg",
+        "images/kos30/gambar4.jpg",
+        "images/kos30/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 31,
     "nama_kos": "Kos Anggrek Berseri",
     "alamat": "Jl. Pelajar, Kecamatan Banda Raya, Banda Aceh",
-    "fasilitas": ["Lemari", "Kasur", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 42
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 42
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 42
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 42
+      }
+    ],
     "harga_perbulan": 851000,
     "harga_pertahun": 8840000,
     "kontak": {
@@ -10128,34 +10367,35 @@
     ],
     "deskripsi": "Kos eksklusif dengan akses mudah ke transportasi umum.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos31/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos31/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos31/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos31/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos31/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos31/gambar1.jpg",
+      "gallery": [
+        "images/kos31/gambar1.jpg",
+        "images/kos31/gambar2.jpg",
+        "images/kos31/gambar3.jpg",
+        "images/kos31/gambar4.jpg",
+        "images/kos31/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 32,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Darussalam, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 15
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 15
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 15
+      }
+    ],
     "harga_perbulan": 706000,
     "harga_pertahun": 11901000,
     "kontak": {
@@ -10446,34 +10686,43 @@
     ],
     "deskripsi": "Dekat dengan pusat perbelanjaan dan rumah sakit.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos32/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos32/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos32/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos32/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos32/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos32/gambar1.jpg",
+      "gallery": [
+        "images/kos32/gambar1.jpg",
+        "images/kos32/gambar2.jpg",
+        "images/kos32/gambar3.jpg",
+        "images/kos32/gambar4.jpg",
+        "images/kos32/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 33,
     "nama_kos": "Kos Teratai Putih",
     "alamat": "Jl. M. Hasan, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": ["Kasur", "Wifi", "Kamar Mandi", "Lemari"],
+    "fasilitas": [
+      {
+        "nama": "Kasur",
+        "jumlah": 16
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 16
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 16
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 16
+      }
+    ],
     "harga_perbulan": 792000,
     "harga_pertahun": 6289000,
     "kontak": {
@@ -10764,34 +11013,43 @@
     ],
     "deskripsi": "Kos nyaman dengan fasilitas lengkap dan lingkungan yang tenang.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos33/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos33/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos33/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos33/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos33/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos33/gambar1.jpg",
+      "gallery": [
+        "images/kos33/gambar1.jpg",
+        "images/kos33/gambar2.jpg",
+        "images/kos33/gambar3.jpg",
+        "images/kos33/gambar4.jpg",
+        "images/kos33/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 34,
     "nama_kos": "Kos Dahlia Indah",
     "alamat": "Jl. Teuku Umar, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Kasur", "Lemari", "Wifi"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 15
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 15
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 15
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 15
+      }
+    ],
     "harga_perbulan": 540000,
     "harga_pertahun": 9409000,
     "kontak": {
@@ -11180,34 +11438,43 @@
     ],
     "deskripsi": "Kos nyaman dengan fasilitas lengkap dan lingkungan yang tenang.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos34/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos34/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos34/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos34/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos34/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos34/gambar1.jpg",
+      "gallery": [
+        "images/kos34/gambar1.jpg",
+        "images/kos34/gambar2.jpg",
+        "images/kos34/gambar3.jpg",
+        "images/kos34/gambar4.jpg",
+        "images/kos34/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 35,
     "nama_kos": "Kos Teratai Asri",
     "alamat": "Jl. M. Hasan, Kecamatan Meuraxa, Banda Aceh",
-    "fasilitas": ["Lemari", "Wifi", "Kasur", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 18
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 18
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 18
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 18
+      }
+    ],
     "harga_perbulan": 781000,
     "harga_pertahun": 4907000,
     "kontak": {
@@ -11428,34 +11695,43 @@
     ],
     "deskripsi": "Fasilitas modern dan pelayanan ramah dari pemilik kos.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos35/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos35/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos35/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos35/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos35/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos35/gambar1.jpg",
+      "gallery": [
+        "images/kos35/gambar1.jpg",
+        "images/kos35/gambar2.jpg",
+        "images/kos35/gambar3.jpg",
+        "images/kos35/gambar4.jpg",
+        "images/kos35/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 36,
     "nama_kos": "Kos Jasmine Sejahtera",
     "alamat": "Jl. Teuku Umar, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": ["Lemari", "Wifi", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 41
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 41
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 41
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 41
+      }
+    ],
     "harga_perbulan": 774000,
     "harga_pertahun": 11822000,
     "kontak": {
@@ -11690,34 +11966,43 @@
     ],
     "deskripsi": "Lingkungan bersih dan aman, cocok untuk mahasiswa maupun pekerja.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos36/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos36/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos36/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos36/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos36/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos36/gambar1.jpg",
+      "gallery": [
+        "images/kos36/gambar1.jpg",
+        "images/kos36/gambar2.jpg",
+        "images/kos36/gambar3.jpg",
+        "images/kos36/gambar4.jpg",
+        "images/kos36/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 37,
     "nama_kos": "Kos Mawar Asri",
     "alamat": "Jl. Pelajar, Kecamatan Syiah Kuala, Banda Aceh",
-    "fasilitas": ["Lemari", "Wifi", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 32
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 32
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 32
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 32
+      }
+    ],
     "harga_perbulan": 458000,
     "harga_pertahun": 4842000,
     "kontak": {
@@ -12001,34 +12286,43 @@
     ],
     "deskripsi": "Hunian yang nyaman dengan sistem keamanan 24 jam.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos37/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos37/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos37/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos37/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos37/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos37/gambar1.jpg",
+      "gallery": [
+        "images/kos37/gambar1.jpg",
+        "images/kos37/gambar2.jpg",
+        "images/kos37/gambar3.jpg",
+        "images/kos37/gambar4.jpg",
+        "images/kos37/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 38,
     "nama_kos": "Kos Dahlia Sejahtera",
     "alamat": "Jl. Pelajar, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": ["Kamar Mandi", "Lemari", "Wifi", "Kasur"],
+    "fasilitas": [
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 23
+      },
+      {
+        "nama": "Lemari",
+        "jumlah": 23
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 23
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 23
+      }
+    ],
     "harga_perbulan": 848000,
     "harga_pertahun": 10693000,
     "kontak": {
@@ -12438,34 +12732,35 @@
     ],
     "deskripsi": "Kos nyaman dengan fasilitas lengkap dan lingkungan yang tenang.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos38/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos38/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos38/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos38/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos38/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos38/gambar1.jpg",
+      "gallery": [
+        "images/kos38/gambar1.jpg",
+        "images/kos38/gambar2.jpg",
+        "images/kos38/gambar3.jpg",
+        "images/kos38/gambar4.jpg",
+        "images/kos38/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 39,
     "nama_kos": "Kos Mawar Putih",
     "alamat": "Jl. Panglima Nyak Makam, Kecamatan Jaya Baru, Banda Aceh",
-    "fasilitas": ["Kasur", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Kasur",
+        "jumlah": 33
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 33
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 33
+      }
+    ],
     "harga_perbulan": 757000,
     "harga_pertahun": 10605000,
     "kontak": {
@@ -12791,34 +13086,43 @@
     ],
     "deskripsi": "Lingkungan bersih dan aman, cocok untuk mahasiswa maupun pekerja.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos39/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos39/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos39/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos39/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos39/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos39/gambar1.jpg",
+      "gallery": [
+        "images/kos39/gambar1.jpg",
+        "images/kos39/gambar2.jpg",
+        "images/kos39/gambar3.jpg",
+        "images/kos39/gambar4.jpg",
+        "images/kos39/gambar5.jpg"
+      ]
+    }
   },
   {
     "id_kos": 40,
     "nama_kos": "Kos Melati Indah",
     "alamat": "Jl. Prof. Ali Hasyimi, Kecamatan Kuta Raja, Banda Aceh",
-    "fasilitas": ["Lemari", "Wifi", "Kasur", "Kamar Mandi"],
+    "fasilitas": [
+      {
+        "nama": "Lemari",
+        "jumlah": 30
+      },
+      {
+        "nama": "Wifi",
+        "jumlah": 1
+      },
+      {
+        "nama": "Kasur",
+        "jumlah": 30
+      },
+      {
+        "nama": "Kamar Mandi",
+        "jumlah": 30
+      },
+      {
+        "nama": "Kamar",
+        "jumlah": 30
+      }
+    ],
     "harga_perbulan": 985000,
     "harga_pertahun": 10347000,
     "kontak": {
@@ -13004,27 +13308,15 @@
     ],
     "deskripsi": "Cocok untuk mahasiswa, tersedia WiFi cepat dan kamar luas.",
     "avgBintang": 3,
-    "image": [
-      {
-        "url": "images/kos40/gambar1.jpg",
-        "isThumbnail": true
-      },
-      {
-        "url": "images/kos40/gambar2.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos40/gambar3.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos40/gambar4.jpg",
-        "isThumbnail": false
-      },
-      {
-        "url": "images/kos40/gambar5.jpg",
-        "isThumbnail": false
-      }
-    ]
+    "image": {
+      "thumbnail": "images/kos40/gambar1.jpg",
+      "gallery": [
+        "images/kos40/gambar1.jpg",
+        "images/kos40/gambar2.jpg",
+        "images/kos40/gambar3.jpg",
+        "images/kos40/gambar4.jpg",
+        "images/kos40/gambar5.jpg"
+      ]
+    }
   }
 ]

@@ -19,8 +19,10 @@ const KosSchema = new mongoose.Schema({
   avgBintang: { type: Number, default: 0 },
   image: [
     {
-      url: { type: String, required: true },
-      isThumbnail: { type: Boolean, default: false },
+      thumbnail: { type: String, required: true },
+      gallery: [
+        { type: String, required: true }
+      ],
     },
   ],
   deskripsi: { type: String, default: "" },
@@ -30,7 +32,7 @@ const KosSchema = new mongoose.Schema({
       bintang: { type: Number, required: true },
       komentar: { type: String, required: true },
       tanggal: { type: Date, default: Date.now },
-      imageUlasan: { type: String, required: true } ,
+      imageUlasan: { type: String, required: true },
     },
   ],
 });
