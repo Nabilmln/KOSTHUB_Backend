@@ -4,7 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 const authRouter = require("./routes/authRoutes");
 const kosRoutes = require("./routes/kosRoutes");
-
+const path = require("path");
 const app = express();
 
 // Middleware
@@ -16,6 +16,9 @@ app.use("/uploads", express.static("uploads"));
 // Routes
 app.use("/api/kos", kosRoutes);
 app.use("/api/auth", authRouter);
+
+// Ekspos folder "uploads" untuk akses gambar
+app.use("/images", express.static(path.join(__dirname, "uploads/images")));
 
 const clientOptions = {
   serverApi: {

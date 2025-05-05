@@ -13,5 +13,6 @@ router.get("/:id", kosController.getKosById);
 router.post("/", kosController.createKos);
 router.put("/:id", kosController.updateKos);
 router.delete("/:id", kosController.deleteKos);
+// router.get("/:id_kos/gallery", kosController.getGalleryKos);
 
 module.exports = router;
