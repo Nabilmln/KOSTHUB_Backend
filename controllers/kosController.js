@@ -12,13 +12,6 @@ exports.getKosById = async (req, res) => {
   kos ? res.json(kos) : res.status(404).json({ message: "Tidak ditemukan" });
 };
 
-// POST
-exports.createKos = async (req, res) => {
-  const kos = new Kos(req.body);
-  await kos.save();
-  res.status(201).json(kos);
-};
-
 // PUT
 exports.updateKos = async (req, res) => {
   const updated = await Kos.findOneAndUpdate(
@@ -28,14 +21,6 @@ exports.updateKos = async (req, res) => {
   );
   updated
     ? res.json(updated)
-    : res.status(404).json({ message: "Tidak ditemukan" });
-};
-
-// DELETE
-exports.deleteKos = async (req, res) => {
-  const result = await Kos.findOneAndDelete({ id_kos: req.params.id });
-  result
-    ? res.json({ message: "Dihapus" })
     : res.status(404).json({ message: "Tidak ditemukan" });
 };
 
@@ -52,16 +37,17 @@ exports.filterKos = async (req, res) => {
     }
 
     // Tentukan field harga berdasarkan tipeHarga
-    const hargaField = tipeHarga === "pertahun" ? "harga_pertahun" : "harga_perbulan";
+    const hargaField =
+      tipeHarga === "pertahun" ? "harga_pertahun" : "harga_perbulan";
 
     // Filter berdasarkan range harga
     if (minHarga || maxHarga) {
       filter[hargaField] = {};
       if (minHarga) {
-        filter[hargaField].$gte = parseInt(minHarga); // Harga minimum
+        filter[hargaField].$gte = parseInt(minHarga);
       }
       if (maxHarga) {
-        filter[hargaField].$lte = parseInt(maxHarga); // Harga maksimum
+        filter[hargaField].$lte = parseInt(maxHarga);
       }
     }
 
@@ -69,29 +55,28 @@ exports.filterKos = async (req, res) => {
     const pipeline = [
       {
         $addFields: {
-          rataRataBintang: { $round: [{ $avg: "$ulasan.bintang" }, 0] }, // Hitung rata-rata bintang dan bulatkan
+          rataRataBintang: { $round: [{ $avg: "$ulasan.bintang" }, 0] },
         },
       },
       {
-        $match: filter, // Terapkan filter lain nya
+        $match: filter,
       },
     ];
 
     // Filter berdasarkan rating (bintang)
     if (rating) {
       pipeline.push({
-        $match: { rataRataBintang: parseInt(rating) }, // Cocokkan dengan nilai bintang yang dipilih
+        $match: { rataRataBintang: parseInt(rating) },
       });
     }
 
     // Sorting berdasarkan harga
     if (harga === "termurah") {
-      pipeline.push({ $sort: { [hargaField]: 1 } }); // Ascending (termurah ke termahal)
+      pipeline.push({ $sort: { [hargaField]: 1 } });
     } else if (harga === "termahal") {
-      pipeline.push({ $sort: { [hargaField]: -1 } }); // Descending (termahal ke termurah)
+      pipeline.push({ $sort: { [hargaField]: -1 } });
     }
 
-    // Eksekusi query dengan pipeline
     const data = await Kos.aggregate(pipeline);
 
     res.json(data);
@@ -101,8 +86,8 @@ exports.filterKos = async (req, res) => {
 };
 
 exports.addReview = async (req, res) => {
-  const { id_kos } = req.params; // Ambil id_kos dari parameter URL
-  const { bintang, komentar } = req.body; // Data ulasan dari body request
+  const { id_kos } = req.params;
+  const { bintang, komentar } = req.body;
 
   try {
     // Validasi input
@@ -127,8 +112,8 @@ exports.addReview = async (req, res) => {
       nama: req.user.username,
       bintang,
       komentar,
-      imageUlasan: req.file ? req.file.path : null, // URL gambar ulasan (jika ada)
-      tanggal: new Date(), // Tanggal ulasan
+      imageUlasan: req.file ? req.file.path : null,
+      tanggal: new Date(),
     };
 
     kos.ulasan.push(newReview);

@@ -106,10 +106,9 @@ exports.changePassword = async (req, res) => {
 };
 
 exports.updateProfile = async (req, res) => {
-  const { username, ...updates } = req.body; // Ambil username, email, foto profil, dan atribut lainnya
+  const { username, ...updates } = req.body;
 
   try {
-    // Cari user berdasarkan ID (dari token)
     const user = await Auth.findById(req.user.id);
     if (!user) {
       return res.status(404).json({ message: "User not found" });
@@ -121,27 +120,8 @@ exports.updateProfile = async (req, res) => {
       if (existingUsername) {
         return res.status(400).json({ message: "Username already exists" });
       }
-      user.username = username; // Perbarui username
+      user.username = username;
     }
-
-    // Periksa apakah email baru sudah digunakan oleh user lain
-    // if (email && email !== user.email) {
-    //   const existingEmail = await Auth.findOne({ email });
-    //   if (existingEmail) {
-    //     return res.status(400).json({ message: "Email already exists" });
-    //   }
-    //   user.email = email; // Perbarui email
-    // }
-
-    // Perbarui foto profil jika ada
-    // if (fotoProfil) {
-    //   user.fotoProfil = fotoProfil; // Simpan URL atau path foto profil
-    // }
-
-    // Perbarui foto profil jika ada file yang diunggah
-    // if (req.file) {
-    //   user.fotoProfil = req.file.path; // Simpan path file yang diunggah
-    // }
 
     // Perbarui atribut lainnya
     Object.keys(updates).forEach((key) => {
@@ -154,7 +134,7 @@ exports.updateProfile = async (req, res) => {
 
     res.status(200).json({ message: "Profile updated successfully", user });
   } catch (error) {
-    console.error("Error updating profile:", error); // Cetak error ke konsol
+    console.error("Error updating profile:", error);
     res
       .status(500)
       .json({ message: "Error updating profile", error: error.message });
@@ -162,17 +142,18 @@ exports.updateProfile = async (req, res) => {
 };
 
 exports.saveKos = async (req, res) => {
-  const { id_kos } = req.params; // Ambil id_kos dari parameter URL
+  const { id_kos } = req.params;
 
   try {
     // Cari kos berdasarkan id_kos
-    const kos = await Kos.findOne({ id_kos }); // Gunakan id_kos, bukan _id
+    const kos = await Kos.findOne({ id_kos });
     if (!kos) {
       return res.status(404).json({ message: "Kos not found" });
     }
 
     // Cari user berdasarkan ID (dari token)
-    const user = await Auth.findById(req.user.id);
+    const user = await Auth.findById(req.user.id).populate("savedKos");
+
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
@@ -183,7 +164,7 @@ exports.saveKos = async (req, res) => {
     }
 
     // Tambahkan kos ke daftar savedKos
-    user.savedKos = user.savedKos || []; // Pastikan savedKos adalah array
+    user.savedKos = user.savedKos || [];
     user.savedKos.push(kos._id);
     await user.save();
 
@@ -193,5 +174,21 @@ exports.saveKos = async (req, res) => {
   } catch (error) {
     console.error("Error saving kos:", error);
     res.status(500).json({ message: "Error saving kos", error: error.message });
+  }
+};
+
+exports.getUser = async (req, res) => {
+  try {
+    const user = await Auth.findById(req.user.id).populate("savedKos");
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.status(200).json(user);
+  } catch (err) {
+    console.error("Error fetching user:", err);
+    res
+      .status(500)
+      .json({ message: "Failed to fetch user", error: err.message });
   }
 };
