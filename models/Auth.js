@@ -39,15 +39,17 @@ const Auth = new mongoose.Schema({
   fotoProfil: {
     type: String,
   },
-  token: {
-    type: String,
-  },
   savedKos: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Kos",
     },
   ],
+  reservaseKos: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Reservase",
+    unique: true,
+  },
 });
 
 module.exports = mongoose.model("Auth", Auth);

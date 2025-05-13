@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { verifyToken } = require("../middleware/auth");
 const Kos = require("../models/Kos");
+const Reservase = require("../models/Reservase");
 
 exports.register = async (req, res) => {
   try {
@@ -174,6 +175,47 @@ exports.saveKos = async (req, res) => {
   } catch (error) {
     console.error("Error saving kos:", error);
     res.status(500).json({ message: "Error saving kos", error: error.message });
+  }
+};
+
+exports.getReservase = async (req, res) => {
+  try {
+    const { id_user } = req.params;
+
+    if (!id_user) {
+      return res.status(400).json({
+        status: 400,
+        message: "Id User Tidak Valid",
+      });
+    }
+
+    const user = await Auth.findById(id_user).populate("reservaseKos");
+
+    if (!user) {
+      return res.status(400).json({
+        status: 400,
+        message: "User tidak ditemukan",
+      });
+    }
+
+    if (!user.reservaseKos) {
+      return res.status(400).json({
+        status: 400,
+        message: "User belum melakukan reservasi",
+      });
+    }
+
+    res.status(200).json({
+      status: 200,
+      message: "Reservasi ditemukan",
+      data: user.reservaseKos,
+    });
+  } catch (error) {
+    console.log("Error getReservase", error);
+    res.status(500).json({
+      message: "Server Internal Error",
+      error: error.message,
+    });
   }
 };
 

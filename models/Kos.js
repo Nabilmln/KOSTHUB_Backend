@@ -17,13 +17,10 @@ const KosSchema = new mongoose.Schema({
     nomor: { type: String, required: true },
   },
   avgBintang: { type: Number, default: 0 },
-  image: 
-    {
-      thumbnail: { type: String, required: true },
-      gallery: [
-        { type: String, required: true }
-      ],
-    },
+  image: {
+    thumbnail: { type: String, required: true },
+    gallery: [{ type: String, required: true }],
+  },
   deskripsi: { type: String, default: "" },
   ulasan: [
     {

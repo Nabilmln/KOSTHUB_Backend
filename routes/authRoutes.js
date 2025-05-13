@@ -15,5 +15,10 @@ authRouter.put(
 );
 authRouter.post("/save-kos/:id_kos", verifyToken, authController.saveKos);
 authRouter.get("/getSaveKost", verifyToken, authController.getUser);
+authRouter.get(
+  "/getReservase/:id_user",
+  verifyToken,
+  authController.getReservase
+);
 
 module.exports = authRouter;
