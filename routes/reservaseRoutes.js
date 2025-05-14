@@ -10,9 +10,9 @@ router.post(
 );
 
 router.get(
-  "/getReservase/:id_kos",
+  "/user/:id_user",
   verifyToken,
-  reservaseConroller.getReservaseById
+  reservaseConroller.getReservaseByUserId
 );
 
 module.exports = router;

@@ -178,47 +178,6 @@ exports.saveKos = async (req, res) => {
   }
 };
 
-exports.getReservase = async (req, res) => {
-  try {
-    const { id_user } = req.params;
-
-    if (!id_user) {
-      return res.status(400).json({
-        status: 400,
-        message: "Id User Tidak Valid",
-      });
-    }
-
-    const user = await Auth.findById(id_user).populate("reservaseKos");
-
-    if (!user) {
-      return res.status(400).json({
-        status: 400,
-        message: "User tidak ditemukan",
-      });
-    }
-
-    if (!user.reservaseKos) {
-      return res.status(400).json({
-        status: 400,
-        message: "User belum melakukan reservasi",
-      });
-    }
-
-    res.status(200).json({
-      status: 200,
-      message: "Reservasi ditemukan",
-      data: user.reservaseKos,
-    });
-  } catch (error) {
-    console.log("Error getReservase", error);
-    res.status(500).json({
-      message: "Server Internal Error",
-      error: error.message,
-    });
-  }
-};
-
 exports.getUser = async (req, res) => {
   try {
     const user = await Auth.findById(req.user.id).populate("savedKos");
