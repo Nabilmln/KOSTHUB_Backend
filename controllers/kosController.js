@@ -1,4 +1,7 @@
 const Kos = require("../models/Kos");
+const User = require("../models/Auth");
+const Reservase = require("../models/Reservase");
+const path = require("path");
 
 // GET all
 exports.getAllKos = async (req, res) => {
@@ -28,112 +31,72 @@ exports.filterKos = async (req, res) => {
   const { fasilitas, minHarga, maxHarga, rating, tipeHarga, harga } = req.query;
 
   try {
-    let filter = {};
+    const pipeline = [];
 
-    // Filter berdasarkan fasilitas
+    pipeline.push({
+      $addFields: {
+        avgBintang: { $round: [{ $avg: "$ulasan.bintang" }, 0] },
+      },
+    });
+
+    let filterStage = { $match: {} };
+
     if (fasilitas) {
       const fasilitasArray = Array.isArray(fasilitas) ? fasilitas : [fasilitas];
-      filter.fasilitas = { $all: fasilitasArray };
+
+      if (fasilitasArray.length > 0) {
+        filterStage.$match.$and = fasilitasArray.map((facility) => ({
+          fasilitas: {
+            $elemMatch: {
+              nama: facility,
+            },
+          },
+        }));
+      }
     }
 
-    // Tentukan field harga berdasarkan tipeHarga
     const hargaField =
       tipeHarga === "pertahun" ? "harga_pertahun" : "harga_perbulan";
 
-    // Filter berdasarkan range harga
     if (minHarga || maxHarga) {
-      filter[hargaField] = {};
-      if (minHarga) {
-        filter[hargaField].$gte = parseInt(minHarga);
+      filterStage.$match[hargaField] = {};
+
+      if (minHarga && minHarga.trim() !== "") {
+        filterStage.$match[hargaField].$gte = parseInt(minHarga);
       }
-      if (maxHarga) {
-        filter[hargaField].$lte = parseInt(maxHarga);
+
+      if (maxHarga && maxHarga.trim() !== "") {
+        filterStage.$match[hargaField].$lte = parseInt(maxHarga);
       }
     }
-
-    // Pipeline MongoDB
-    const pipeline = [
-      {
-        $addFields: {
-          rataRataBintang: { $round: [{ $avg: "$ulasan.bintang" }, 0] },
-        },
-      },
-      {
-        $match: filter,
-      },
-    ];
-
-    // Filter berdasarkan rating (bintang)
-    if (rating) {
-      pipeline.push({
-        $match: { rataRataBintang: parseInt(rating) },
-      });
+    if (rating && rating.trim() !== "") {
+      filterStage.$match.avgBintang = parseInt(rating);
     }
 
-    // Sorting berdasarkan harga
+    if (Object.keys(filterStage.$match).length > 0) {
+      pipeline.push(filterStage);
+    }
+
     if (harga === "termurah") {
       pipeline.push({ $sort: { [hargaField]: 1 } });
     } else if (harga === "termahal") {
       pipeline.push({ $sort: { [hargaField]: -1 } });
+    } else if (harga === "rating") {
+      pipeline.push({ $sort: { avgBintang: -1 } });
     }
+
+    pipeline.push({ $sort: { id_kos: 1 } });
 
     const data = await Kos.aggregate(pipeline);
 
+    console.log(`Found ${data.length} kos matching the criteria`);
+
     res.json(data);
   } catch (error) {
-    res.status(500).json({ message: "Error filtering kos", error });
-  }
-};
-
-exports.addReview = async (req, res) => {
-  const { id_kos } = req.params;
-  const { bintang, komentar } = req.body;
-
-  try {
-    // Validasi input
-    if (!bintang || bintang < 1 || bintang > 5) {
-      return res
-        .status(400)
-        .json({ message: "Rating harus antara 1 hingga 5" });
-    }
-
-    if (!komentar || komentar.trim() === "") {
-      return res.status(400).json({ message: "Komentar tidak boleh kosong" });
-    }
-
-    // Cari kos berdasarkan id_kos
-    const kos = await Kos.findOne({ id_kos });
-    if (!kos) {
-      return res.status(404).json({ message: "Kos not found" });
-    }
-
-    // Tambahkan ulasan baru ke array ulasan
-    const newReview = {
-      nama: req.user.username,
-      bintang,
-      komentar,
-      imageUlasan: req.file ? req.file.path : null,
-      tanggal: new Date(),
-    };
-
-    kos.ulasan.push(newReview);
-
-    // Hitung rata-rata bintang baru
-    const totalBintang = kos.ulasan.reduce(
-      (sum, review) => sum + review.bintang,
-      0
-    );
-    kos.avgBintang = totalBintang / kos.ulasan.length;
-
-    await kos.save();
-
-    res
-      .status(200)
-      .json({ message: "Review added successfully", review: newReview });
-  } catch (error) {
-    console.error("Error adding review for kos ID:", id_kos, error);
-    res
-      .status(500)
-      .json({ message: "Error adding review", error: error.message });
+    console.error("Filtering error:", error);
+    res.status(500).json({
+      message: "Error filtering kos",
+      error: error.message,
+    });
   }
 };

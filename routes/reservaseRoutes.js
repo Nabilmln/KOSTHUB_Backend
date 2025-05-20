@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const reservaseConroller = require("../controllers/reservaseController");
 const { verifyToken } = require("../middleware/auth");
+const upload = require("../middleware/upload");
 
 router.post(
   "/:id_user/:id_kos",
@@ -15,4 +16,16 @@ router.get(
   reservaseConroller.getReservaseByUserId
 );
 
+router.delete(
+  "/user/:id_user/:id_reservase",
+  verifyToken,
+  reservaseConroller.deleteReservaseByUserAndReservaseId
+);
+
+router.post(
+  "/review/:id_user/:id_reservase",
+  verifyToken,
+  upload.single("imageUlasan"),
+  reservaseConroller.addReview
+);
 module.exports = router;

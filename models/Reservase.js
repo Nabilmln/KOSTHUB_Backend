@@ -7,7 +7,17 @@ const Reservase = new mongoose.Schema(
     nomor_hp: { type: String },
     gender: { type: Boolean },
     email: { type: String },
-    periode_penyewaan: { type: String, enum: ["Tahun", "Bulan"] },
+    metode_pembayaran: {
+      type: String,
+      enum: [
+        "Bank Syariah Indonesia",
+        "Bank Mandiri",
+        "Bank Negara Indonesia",
+        "Bank Tabungan Negara",
+        "Bank Central Asia",
+        "Bank Aceh Syariah",
+      ],
+    },
     kontrak: { type: String },
     bukti_pembayaran: { type: String },
     id_user: {

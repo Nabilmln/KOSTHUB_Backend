@@ -19,7 +19,6 @@ app.use("/api/kos", kosRoutes);
 app.use("/api/auth", authRouter);
 app.use("/api/reservase", reservaseRoutes);
 
-// Ekspos folder "uploads" untuk akses gambar
 app.use("/images", express.static(path.join(__dirname, "uploads/images")));
 
 const clientOptions = {

@@ -114,8 +114,6 @@ exports.updateProfile = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
-
-    // Periksa apakah username baru sudah digunakan oleh user lain
     if (username && username !== user.username) {
       const existingUsername = await Auth.findOne({ username });
       if (existingUsername) {
@@ -124,7 +122,6 @@ exports.updateProfile = async (req, res) => {
       user.username = username;
     }
 
-    // Perbarui atribut lainnya
     Object.keys(updates).forEach((key) => {
       if (updates[key] !== undefined) {
         user[key] = updates[key];
@@ -146,25 +143,21 @@ exports.saveKos = async (req, res) => {
   const { id_kos } = req.params;
 
   try {
-    // Cari kos berdasarkan id_kos
     const kos = await Kos.findOne({ id_kos });
     if (!kos) {
       return res.status(404).json({ message: "Kos not found" });
     }
 
-    // Cari user berdasarkan ID (dari token)
     const user = await Auth.findById(req.user.id).populate("savedKos");
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Periksa apakah kos sudah disimpan sebelumnya
     if (user.savedKos && user.savedKos.includes(kos._id)) {
       return res.status(400).json({ message: "Kos already saved" });
     }
 
-    // Tambahkan kos ke daftar savedKos
     user.savedKos = user.savedKos || [];
     user.savedKos.push(kos._id);
     await user.save();

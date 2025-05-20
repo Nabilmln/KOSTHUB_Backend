@@ -2,16 +2,8 @@ const express = require("express");
 const router = express.Router();
 const kosController = require("../controllers/kosController");
 const upload = require("../middleware/upload");
-const { verifyToken } = require("../middleware/auth");
 
 router.get("/filter", kosController.filterKos);
-router.post(
-  "/add-review/:id_kos",
-  verifyToken,
-  upload.single("imageUlasan"),
-  kosController.addReview
-);
-
 router.get("/", kosController.getAllKos);
 router.get("/:id", kosController.getKosById);
 router.put("/:id", kosController.updateKos);

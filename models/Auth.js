@@ -45,11 +45,6 @@ const Auth = new mongoose.Schema({
       ref: "Kos",
     },
   ],
-  reservaseKos: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Reservase",
-    unique: true,
-  },
 });
 
 module.exports = mongoose.model("Auth", Auth);

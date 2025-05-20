@@ -1,23 +1,28 @@
+// middlewares/upload.js
 const multer = require("multer");
+const path = require("path");
 
+// Konfigurasi penyimpanan
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads/reviews"); // Folder penyimpanan
+  destination: function (req, file, cb) {
+    cb(null, "uploads/"); // folder tujuan penyimpanan
   },
-  filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-${file.originalname}`); // Nama file unik
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    cb(null, uniqueSuffix + path.extname(file.originalname));
   },
 });
 
+// Filter file: hanya gambar
 const fileFilter = (req, file, cb) => {
-  const allowedTypes = ["image/jpeg", "image/png", "image/jpg"];
-  if (allowedTypes.includes(file.mimetype)) {
+  const allowedTypes = /jpeg|jpg|png|webp/;
+  const ext = allowedTypes.test(path.extname(file.originalname).toLowerCase());
+  const mime = allowedTypes.test(file.mimetype);
+
+  if (ext && mime) {
     cb(null, true);
   } else {
-    cb(
-      new Error("Invalid file type. Only JPEG, PNG, and JPG are allowed."),
-      false
-    );
+    cb(new Error("Only image files are allowed!"));
   }
 };
 
